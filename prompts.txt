@@ -1,0 +1,14 @@
+
+[plan mode (with web tool disabled)]:
+This is a static html project called Bucks2Bar. We need a UI that displays income and expense inputs for months jan - dec. The UI should be split into 2 tabs ("Data" and "Chart"), the chart tab plots a bar chart of the income and expenses from the inputs in the Data tab. The currency should be USD. Help me build this project out as well as suggesting suitable UI and chart libraries.
+
+[selections]:
+Bootstrap 5
+Chart.js
+No data persistence
+
+[agent mode]:
+Start implementation
+
+[agent mode]:
+It looks like the bootstrap js cdn is not working, this message is displaying in the browser console: [page any errors from console here]

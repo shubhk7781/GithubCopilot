@@ -102,6 +102,30 @@ function formatSelectedMoney(value) {
   return money.format(value || 0);
 }
 
+function downloadChartAsPng() {
+  if (!moneyChart || !moneyChart.canvas) return;
+
+  const canvas = moneyChart.canvas;
+  const link = document.createElement("a");
+  const fileName = `bucks2bar-chart-${new Date().toISOString().slice(0, 10)}.png`;
+
+  if (canvas.toBlob) {
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      link.href = url;
+      link.download = fileName;
+      link.click();
+      URL.revokeObjectURL(url);
+    }, "image/png");
+    return;
+  }
+
+  link.href = canvas.toDataURL("image/png");
+  link.download = fileName;
+  link.click();
+}
+
 function updateCurrency() {
   selectedCurrency = document.querySelector("#currency-select").value;
   money = createFormatter();
@@ -135,3 +159,4 @@ updateSummary();
 createChart();
 setupTabs();
 document.querySelector("#currency-select").addEventListener("change", updateCurrency);
+document.querySelector("#download-chart").addEventListener("click", downloadChartAsPng);

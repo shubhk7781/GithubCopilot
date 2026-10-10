@@ -1,3 +1,8 @@
+---
+name: Authentication
+description: This file describes the authentication rules and guidelines for the project. Read this before making any authentication-related changes.
+---
+
 # Authentication Instructions
 
 These rules govern every authentication-related change in this application.
@@ -58,4 +63,4 @@ Before considering an auth-related change complete, verify:
 - Sign-in opens a Clerk modal.
 - Sign-up opens a Clerk modal.
 - No custom auth cookies, credentials, session storage, or competing auth provider were introduced.
-- `npm run lint` passes, and run `npm run build` when route, middleware, or production behavior changes.
+- `npm run lint` pass check

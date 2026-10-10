@@ -7,4 +7,4 @@ tools: ['vscode', 'read','edit', 'search', 'web',] # specify the tools this agen
 
 <!-- Tip: Use /create-agent in chat to generate content with agent assistance -->
 
-This agent takes the provided information about a layer of architecture or coding instructions within this app and generetes a highly specific and clear .md insructions file in markkdown format for docs directory. 
+This agent takes the provided information about a layer of architecture or coding instructions within this app and generetes a highly specific and clear .md insructions file in markkdown format. 

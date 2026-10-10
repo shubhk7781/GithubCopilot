@@ -1,0 +1,31 @@
+﻿
+> linkshortner@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.3.5 (Turbopack)
+- Environments: .env
+Γ£ô Running next.config.ts took 133ms
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 6.7s
+  Running TypeScript ...
+  Finished TypeScript in 14.8s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+Γ£ô Generating static pages using 6 workers (5/5) in 5.3s
+  Finalizing page optimization ...
+
+Route (app)
+Γöî ╞Æ /
+Γö£ ╞Æ /_not-found
+Γöö ╞Æ /dashboard
+
+
+╞Æ Proxy (Middleware)
+
+╞Æ  (Dynamic)  server-rendered on demand
+
+

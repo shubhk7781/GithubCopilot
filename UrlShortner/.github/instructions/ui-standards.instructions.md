@@ -1,3 +1,8 @@
+---
+name: UI Standards
+description: This file describes the UI standards and guidelines for the project. Read this before making any UI-related changes.
+---
+
 # UI Standards
 
 These rules govern every user-facing interface change in this application.
@@ -60,4 +65,4 @@ Before considering a UI change complete, verify:
 - Existing `components/ui/` patterns were reused where possible.
 - Tailwind is used for layout/styling only, not as a substitute for shadcn primitives.
 - No duplicate or parallel component system was added.
-- `npm run lint` passes, and `npm run build` is run for UI changes that affect routes, layouts, or production behavior.
+- `npm run lint` pass check

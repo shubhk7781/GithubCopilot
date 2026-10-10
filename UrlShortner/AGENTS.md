@@ -20,13 +20,6 @@ These instructions apply to all work in this repository. Read the relevant docum
 - Styling uses Tailwind CSS 4, `tw-animate-css`, shadcn CSS variables, and the existing UI primitives under `components/ui/`.
 - The application is currently scaffold-level. Do not describe or depend on URL-shortening workflows that have not been implemented.
 
-## Documentation Map
-
-CRITICAL REQUIREMENT: Before generating, writing, or modifying any code for any task, first identify and read the individual instruction document(s) in `/docs` that apply to the task. Do not generate code until you have read them. This is mandatory for every code task, not an optional reference or a step to defer until implementation.
-
-- [docs/authentication.md](docs/authentication.md) — Clerk authentication and route protection rules.
-- [docs/ui-standards.md](docs/ui-standards.md) — required shadcn/ui usage and no-custom-component rule.
-
 ## General Rules
 
 - Preserve existing user changes and keep edits focused on the requested behavior.
@@ -35,8 +28,6 @@ CRITICAL REQUIREMENT: Before generating, writing, or modifying any code for any 
 - ALL UI elements in this app must use shadcn/ui. Do not create any custom UI components. Always use the existing shadcn component primitives under `components/ui/`.
 - Tailwind may be used for layout and spacing, but not as a replacement for shadcn components.
 - Keep secrets and connection strings in environment variables. Never commit `.env` files, credentials, Clerk keys, or database URLs.
-- Update the relevant document in `docs/` when a change makes its guidance inaccurate.
-- Before finishing, run the narrowest relevant check, then `npm run lint`; run `npm run build` for changes that affect routing, configuration, data access, or production behavior.
 
 ## Next.js Version Note
 

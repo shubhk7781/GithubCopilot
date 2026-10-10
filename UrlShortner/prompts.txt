@@ -1,4 +1,0 @@
-npx create-next-app@latest linkshortenerproject
-
-[agent mode]:
-[copy and paste prompt from clerk]

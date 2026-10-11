@@ -151,3 +151,24 @@ export async function getUserUrlsPage(userId: string, page: number) {
     pageSize: PAGE_SIZE,
   };
 }
+
+export type DailyLinkCount = { day: string; count: number };
+
+/**
+ * Links created per calendar day for the current week.
+ * `date_trunc('week', ...)` uses ISO weeks, so the week starts on Monday;
+ * boundaries follow the database session timezone.
+ */
+export async function getDailyLinkCountsForCurrentWeek(): Promise<DailyLinkCount[]> {
+  const rows = await db
+    .select({
+      day: sql<string>`to_char(date_trunc('day', ${urls.createdAt}), 'YYYY-MM-DD')`,
+      count: count(),
+    })
+    .from(urls)
+    .where(sql`${urls.createdAt} >= date_trunc('week', now())`)
+    .groupBy(sql`date_trunc('day', ${urls.createdAt})`)
+    .orderBy(sql`date_trunc('day', ${urls.createdAt})`);
+
+  return rows.map((row) => ({ day: row.day, count: Number(row.count) }));
+}

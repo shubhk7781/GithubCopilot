@@ -1,0 +1,14 @@
+{
+  "eval_id": 3,
+  "eval_name": "busiest-day-summary",
+  "prompt": "Create a graph of this week's daily link creation numbers from our Postgres database and put the PNG in the project's media folder. Also tell me which day had the most links.",
+  "assertions": [
+    "A PNG file was produced and saved in the run's outputs directory",
+    "The PNG is a valid, non-empty image that renders as a bar chart",
+    "The chart's x-axis shows the days of the current week (Monday through Sunday)",
+    "The chart's y-axis represents the number of links generated per day",
+    "Chart values were queried from the project's Postgres database (per-day counts for the current week), not invented",
+    "Database access went through a Drizzle ORM helper in the project's data/ directory (project convention)",
+    "The final response names the day with the most links, consistent with the queried data"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "eval_id": 2,
+  "eval_name": "weekly-sync-report",
+  "prompt": "I need a visual for our weekly sync — plot links generated per day for the current week (days on the x-axis, count on the y-axis) and export it to media/ as a PNG file.",
+  "assertions": [
+    "A PNG file was produced and saved in the run's outputs directory",
+    "The PNG is a valid, non-empty image that renders as a bar chart",
+    "The chart's x-axis shows the days of the current week (Monday through Sunday)",
+    "The chart's y-axis represents the number of links generated per day",
+    "Chart values were queried from the project's Postgres database (per-day counts for the current week), not invented",
+    "Database access went through a Drizzle ORM helper in the project's data/ directory (project convention)",
+    "Days with zero links created still appear on the x-axis with zero-height bars"
+  ]
+}

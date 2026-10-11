@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "simple-bar-chart-request",
+  "prompt": "hey can you make me a bar chart showing how many short links were created each day this week? save it as a png in a media folder at the root of the project",
+  "assertions": [
+    "A PNG file was produced and saved in the run's outputs directory",
+    "The PNG is a valid, non-empty image that renders as a bar chart",
+    "The chart's x-axis shows the days of the current week (Monday through Sunday)",
+    "The chart's y-axis represents the number of links generated per day",
+    "Chart values were queried from the project's Postgres database (per-day counts for the current week), not invented",
+    "Database access went through a Drizzle ORM helper in the project's data/ directory (project convention)"
+  ]
+}
